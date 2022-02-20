@@ -1,0 +1,470 @@
+/* global setting */
+body,header,article, footer,menu,nav,div,h1,h2,h3,p,a,a:hover,blockquote,ul,li{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    text-decoration: none;
+    font: inherit;
+    vertical-align: baseline;
+    font-size: 100%;}
+ol,ul{
+    list-style: none;
+}
+* {
+    box-sizing: border-box;
+}
+[class*="col-"] {
+    float: left;
+}
+  .col-1 {width: 8.33%;}
+  .col-2 {width: 16.66%;}
+  .col-3 {width: 25%;}
+  .col-4 {width: 33.33%;}
+  .col-5 {width: 41.66%;}
+  .col-6 {width: 50%;}
+  .col-7 {width: 58.33%;}
+  .col-8 {width: 66.66%;}
+  .col-9 {width: 75%;}
+  .col-10 {width: 83.33%;}
+  .col-11 {width: 91.66%;}
+  .col-12 {width: 100%;}
+/* import fonts */
+@font-face{
+    font-family: logo1;
+    src: url(../ExportedFonts/ProximaNova/ProximaNova-RegIt.otf); 
+}
+@font-face{
+    font-family: logo2;
+    src: url(../ExportedFonts/ProximaNova/ProximaNova-Black.otf);  
+}
+@font-face{
+    font-family: ProximaNova;
+    src: url(../ExportedFonts/ProximaNova/ProximaNova-Reg.otf);  
+}
+@font-face{
+    font-family: ProximaNova-light;
+    src: url(../ExportedFonts/ProximaNova/ProximaNova-Light.otf);  
+}
+@font-face{
+    font-family: Roboto;
+    src: url(../ExportedFonts/Roboto/Roboto-Regular.ttf);  
+}
+@font-face{
+    font-family: Roboto-light;
+    src: url(../ExportedFonts/Roboto/Roboto-Light.ttf);  
+}
+
+/* wrapper setting */
+.wrapper{
+    width: 100%;
+    position: relative;
+    margin: 0 auto;
+    align-items: center;
+}
+
+/* page-header setting */
+.page-header{
+    background:#f7c61d;
+    height: 67px;
+    width: 100%;
+    text-align: center; 
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;   
+}
+
+/* logo setting */
+.logo{
+    font-size: 30px;
+    vertical-align: middle;
+    display: flex;
+    justify-content: center;
+}
+.responsive{
+    display: none;
+}
+
+
+/* top navigation setting */
+.page-header .top-nav{
+    /* width: 30%; */
+    font-size: 16px;
+    font-family: ProximaNova; 
+    text-align: center;  
+}
+.top-nav li{
+    display: inline;
+}
+.top-nav li a{
+	color:black;
+	text-transform: uppercase;
+	text-decoration: none;
+	line-height: 36px;
+    padding: 15px;
+}
+.top-nav li a:hover {
+	color: rgba(241, 12, 12, 0.945);
+}
+
+/* page-body setting */
+.page-body{
+    width: 81.25%;
+    background-color:rgba(0, 0,0, 0);
+    margin: 0 auto;
+}
+/* recent articles setting */
+.recent-articles{
+    width: 100%;
+    font-size: 24px;
+    line-height: 30px;
+    color: #333333;
+    font-weight: bold;
+    font-family: ProximaNova;
+    margin-top: 43px; 
+
+}
+
+/* main-sidebar setting */
+.main-sidebar{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    /* width: 1170px;
+    height: 1412px; */
+    width: 100%;
+
+}
+.main-sidebar::after{
+    content: " ";
+    width: 1px;
+    height: 1490px;
+    background-color: #dcdcdc;
+    position: absolute;
+    /* margin-left: 900px; */
+    margin-left: 62%;
+    margin-top: -75px;
+}
+
+/* main-part setting */
+.main-part{
+    /* width: 871px;
+    height: 1412px; */
+    width: 74.44%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+/* picture and article setting */
+.pic-article{
+    /* width: 871px; */
+    width: 100%;
+    height: 195px;
+}
+.pic-article, p ::after{
+    clear: both;
+}
+
+.pic{
+    width: 270px;
+    /* width: 31%; */
+    height: 195px;
+    float: left;
+}
+.article{
+    /* width: 570px; */
+    width: 65.44%;
+    height: 195px;
+    float: right;
+}
+
+/* title setting */
+.title{
+    font-size: 30px;
+    line-height: 30px;
+    color: #333333;
+    font-family: ProximaNova-light;    
+}
+/* setting of date, author,category,look,comments */
+.more-info{
+    font-size: 13px;
+    font-family: Roboto-light;
+    line-height: 30px;
+    color: rgb(153, 153,153);
+    display: inline;
+}
+
+/* text setting */
+.text{
+    font-size: 16px;
+    font-family: Roboto-light;
+    color: rgb(85, 85, 85);
+    line-height: 30px;
+}
+.text ::after{
+    content: ">";
+    color: rgb(227, 176, 2);
+    font-size: 16;
+    font-weight: 900;
+    font-family: logo2;
+}
+
+/* link button more articles setting */
+.more-articles{
+    width: 171px;
+    height: 43px;
+    position: absolute;
+    margin-top: 60px;
+    /* margin-left: 370px; */
+    margin-left: 25.69%;
+    border-radius: 5px;
+    background-color: rgba(248,204,51,0);
+    border: 1px solid #f8cc33;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 43px;    
+}
+.more-articles a{
+    font-size: 12px;
+    letter-spacing: 1px;
+    color: #000000;
+    font-weight: 400;
+    font-family: "Roboto";
+    text-transform: uppercase;  
+}
+.more-articles a:hover {
+	color: rgba(241, 12, 12, 0.945);
+}
+
+/* side-bar setting */
+.side-bar{
+    width: 239px;
+    height: 1412px;   
+}
+
+/* keyword setting */
+input,
+button {
+    background-color:transparent;
+    border:0;
+}
+.keyword{
+    display: inline-block;
+    width: 100%;
+    height: 29px;
+    border-radius: 14px;
+    background-color: rgba(154,154,154,0);
+    border: 1px solid rgba(0,0,0,0.1);
+    font-size: 14px;
+    line-height: 29px;
+    color: rgb(153, 153,153);
+    font-family: "Roboto";
+    vertical-align: middle;
+}
+
+/* calendar part setting */
+.calendar{
+    width: 100%;
+    border-radius: 5px;
+    background-color: #ffffff;
+    border: 1px solid rgba(0,0,0,0.1);
+    margin-top: 35px;
+    
+}
+
+/* Month header */
+.june {
+    height: 40px;
+    width: 100%;
+    background: #ffffff;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    
+  }
+.june .symble{
+    width: 20%;
+    line-height: 18px;
+    font-size: 16px;
+    font-family:ProximaNova ;
+    color: rgb(160, 160,160);
+
+}
+.june .current{
+    width: 60%;
+    line-height: 21px;
+    font-size: 16px;
+    font-family:ProximaNova ;
+    color: rgb(0, 0, 0);
+
+}
+
+/* calendar table setting */
+.cal-table{
+    width: 100%;
+    display: table;
+    font-family: Roboto;
+}
+table,th,td{
+    border: 1px solid rgba(0,0,0,0.1);
+    border-collapse: collapse;
+}
+.cal-table tr{
+    width: 100%;
+} 
+
+/* calendar table head setting */
+.table-head {
+	background-color: #e7e7e7;
+	text-decoration: none;
+    height: 27px;
+    line-height: 27px;
+    vertical-align: middle;
+    font-size: 11px;
+    font-weight: 400;
+    color: #888888;
+}
+
+/* calendar week setting */
+.week{
+    width: 100%;
+    height: 33.8px;
+    width: 28px;
+    font-size: 13px;
+    line-height: 21px;
+    font-weight: 400;
+    vertical-align: middle;
+    text-align: center;
+}
+
+/* other month day setting */
+
+.other-month-day a{
+    color:#c1c1c1;   
+}
+
+/* current month day setting */
+.current-month-day a{
+    color: #000000;
+}
+
+/* current day setting */
+.current-day{
+    background-color: #f7c61d;
+}
+
+.current-day a{
+    color: #ffffff;
+}
+
+/* popular news setting */
+.popular-news{
+    width: 238px;
+    height: 18px;
+    position: relative;
+    margin-top: 50px;
+    font-size: 18px;
+    line-height: 18px;
+    color: #000000;
+    font-weight: bold;
+    font-family: "ProximaNova";
+}
+
+/* news column setting */
+.news{
+    width: 238px;
+    height: 325px;
+    position: relative;
+    margin-top: 24px;
+    font-size: 12px;
+    line-height: 18px;
+    color: #999999;
+    font-weight: 400;
+    font-family: "Roboto";
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+
+/* date and news block setting */
+
+/* news date setting */
+.date{
+    font-size: 12px;
+    font-family: Roboto-light;
+    color: rgb(153, 153,153);
+    
+}
+
+/* news title setting */
+.news-title{
+    font-size: 16px;
+    font-family: Roboto;
+    color:rgb(0, 0, 0);
+    display: inline;
+    line-height: 20px;
+
+}
+
+/* page-footer setting */
+.footer{
+    background:#f7c61d;
+    height: 67px;
+    width: 100%;
+    text-align: center; 
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+
+}
+
+/* copy-right setting */
+
+.copy-right{
+    font-size: 13px;
+    line-height: 24px;
+    color: #a78613;
+    font-weight: 300;
+    font-family: "ProximaNova";
+    margin-left: 135px;
+    /* width: 33.3%; */
+}
+
+/* footer middle part setting */
+.mid-footer{
+    text-align: center;
+    /* width: 33.3%; */
+}
+
+.mid-footer li{
+    display: inline;    
+}
+
+.mid-footer li a{
+    color: #000000;
+    line-height: 26px;
+    height: 26px;
+    font-size: 14px;
+    font-weight: 400;
+    font-family: "Roboto"; 
+    padding: 20px;   
+}
+.mid-footer li a:hover{
+    color: rgba(241, 12, 12, 0.945);
+}
+
+/* social-media part setting */
+.social-media{
+    /* width: 33.3%; */
+    margin-right: 135px;
+}
+.social-media li{
+    display: inline;
+}
+.social-media li a:hover{
+    color: rgba(241, 12, 12, 0.945);
+
+}
+
+  
